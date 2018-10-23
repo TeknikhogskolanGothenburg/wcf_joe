@@ -1,0 +1,8 @@
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\bin\Debug\netstandard2.0\Rental_Data.deps.json
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\bin\Debug\netstandard2.0\Rental_Data.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\bin\Debug\netstandard2.0\Rental_Data.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.csproj.CoreCompileInputs.cache
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.AssemblyInfoInputs.cache
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.AssemblyInfo.cs
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.pdb

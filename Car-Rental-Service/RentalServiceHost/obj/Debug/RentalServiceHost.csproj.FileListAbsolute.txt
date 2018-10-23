@@ -1,0 +1,17 @@
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\RentalServiceHost.exe.config
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\RentalServiceHost.exe
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\RentalServiceHost.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\RentalService.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\RentalService.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\RentalService.dll.config
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\obj\Debug\RentalServiceHost.csprojResolveAssemblyReference.cache
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\obj\Debug\RentalServiceHost.csproj.CoreCompileInputs.cache
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\obj\Debug\RentalServiceHost.csproj.CopyComplete
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\obj\Debug\RentalServiceHost.exe
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\obj\Debug\RentalServiceHost.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\Rental_Logic.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\netstandard.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\Rental_Data.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\Rental_Logic.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\bin\Debug\Rental_Data.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceHost\obj\Debug\RentalServiceHost.csprojAssemblyReference.cache

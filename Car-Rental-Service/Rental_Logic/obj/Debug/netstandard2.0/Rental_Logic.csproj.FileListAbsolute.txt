@@ -1,0 +1,12 @@
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\bin\Debug\netstandard2.0\Rental_Logic.deps.json
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\bin\Debug\netstandard2.0\Rental_Logic.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\bin\Debug\netstandard2.0\Rental_Logic.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\bin\Debug\netstandard2.0\Rental_Data.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\bin\Debug\netstandard2.0\Rental_Data.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\obj\Debug\netstandard2.0\Rental_Logic.csproj.CoreCompileInputs.cache
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\obj\Debug\netstandard2.0\Rental_Logic.AssemblyInfoInputs.cache
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\obj\Debug\netstandard2.0\Rental_Logic.AssemblyInfo.cs
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\obj\Debug\netstandard2.0\Rental_Logic.csproj.CopyComplete
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\obj\Debug\netstandard2.0\Rental_Logic.dll
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\obj\Debug\netstandard2.0\Rental_Logic.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Logic\obj\Debug\netstandard2.0\Rental_Logic.csprojAssemblyReference.cache
