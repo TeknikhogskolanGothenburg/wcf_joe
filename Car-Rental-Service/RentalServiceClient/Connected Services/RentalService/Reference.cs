@@ -12,40 +12,40 @@ namespace RentalServiceClient.RentalService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RentalService.IRentalService")]
-    public interface IRentalService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RentalService.IRentalServiceTest")]
+    public interface IRentalServiceTest {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalService/AddCar", ReplyAction="http://tempuri.org/IRentalService/AddCarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddCar", ReplyAction="http://tempuri.org/IRentalServiceTest/AddCarResponse")]
         void AddCar(string regNumber, string brand, int year, string model);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalService/AddCar", ReplyAction="http://tempuri.org/IRentalService/AddCarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddCar", ReplyAction="http://tempuri.org/IRentalServiceTest/AddCarResponse")]
         System.Threading.Tasks.Task AddCarAsync(string regNumber, string brand, int year, string model);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IRentalServiceChannel : RentalServiceClient.RentalService.IRentalService, System.ServiceModel.IClientChannel {
+    public interface IRentalServiceTestChannel : RentalServiceClient.RentalService.IRentalServiceTest, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class RentalServiceClient : System.ServiceModel.ClientBase<RentalServiceClient.RentalService.IRentalService>, RentalServiceClient.RentalService.IRentalService {
+    public partial class RentalServiceTestClient : System.ServiceModel.ClientBase<RentalServiceClient.RentalService.IRentalServiceTest>, RentalServiceClient.RentalService.IRentalServiceTest {
         
-        public RentalServiceClient() {
+        public RentalServiceTestClient() {
         }
         
-        public RentalServiceClient(string endpointConfigurationName) : 
+        public RentalServiceTestClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public RentalServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public RentalServiceTestClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public RentalServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public RentalServiceTestClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public RentalServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public RentalServiceTestClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         

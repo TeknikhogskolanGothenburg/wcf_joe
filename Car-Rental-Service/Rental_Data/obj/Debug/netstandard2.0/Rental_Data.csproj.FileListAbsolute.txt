@@ -6,3 +6,12 @@ C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Da
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.AssemblyInfo.cs
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.dll
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.pdb
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\bin\Debug\netstandard2.0\Rental_Data.deps.json
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\bin\Debug\netstandard2.0\Rental_Data.dll
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\bin\Debug\netstandard2.0\Rental_Data.pdb
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.csprojAssemblyReference.cache
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.csproj.CoreCompileInputs.cache
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.AssemblyInfoInputs.cache
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.AssemblyInfo.cs
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.dll
+C:\Users\Joe\source\repos\CarRentalServiceWCF\Car-Rental-Service\Rental_Data\obj\Debug\netstandard2.0\Rental_Data.pdb

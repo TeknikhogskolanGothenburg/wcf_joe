@@ -74,7 +74,7 @@
     <None Include="Connected Services\RentalService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\RentalService\RentalService.wsdl" />
+    <None Include="Connected Services\RentalService\RentalServiceTest.wsdl" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

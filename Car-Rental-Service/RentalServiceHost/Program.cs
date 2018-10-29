@@ -11,7 +11,7 @@ namespace RentalServiceHost
     {
         static void Main(string[] args)
         {
-            using (ServiceHost host = new ServiceHost(typeof(RentalService.RentalService)))
+            using (ServiceHost host = new ServiceHost(typeof(RentalService.RentalServiceTest)))
             {
                 host.Open();
                 Console.WriteLine("Host started @ " + DateTime.Now.ToString());

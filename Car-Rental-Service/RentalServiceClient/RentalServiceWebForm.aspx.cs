@@ -16,8 +16,8 @@ namespace RentalServiceClient
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            RentalService.RentalServiceClient client = new
-            RentalService.RentalServiceClient("BasicHttpBinding_IRentalService");
+            RentalService.RentalServiceTestClient client = new
+            RentalService.RentalServiceTestClient("BasicHttpBinding_IRentalServiceTest");
             client.AddCar(TextBox1.Text, TextBox2.Text, Convert.ToInt32(TextBox3.Text), TextBox4.Text);
         }
     }

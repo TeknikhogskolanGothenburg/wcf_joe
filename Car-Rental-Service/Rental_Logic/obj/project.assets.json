@@ -192,23 +192,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JoeKH_000\\.nuget\\packages\\": {},
+    "C:\\Users\\Joe\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Logic\\Rental_Logic.csproj",
+      "projectUniqueName": "C:\\Users\\Joe\\source\\repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Logic\\Rental_Logic.csproj",
       "projectName": "Rental_Logic",
-      "projectPath": "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Logic\\Rental_Logic.csproj",
-      "packagesPath": "C:\\Users\\JoeKH_000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Logic\\obj\\",
+      "projectPath": "C:\\Users\\Joe\\source\\repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Logic\\Rental_Logic.csproj",
+      "packagesPath": "C:\\Users\\Joe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Joe\\source\\repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Logic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\JoeKH_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -221,8 +221,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj": {
-              "projectPath": "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj"
+            "C:\\Users\\Joe\\source\\repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj": {
+              "projectPath": "C:\\Users\\Joe\\source\\repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj"
             }
           }
         }
