@@ -20,5 +20,10 @@ namespace RentalServiceClient
             RentalService.RentalServiceTestClient("BasicHttpBinding_IRentalServiceTest");
             client.AddCar(TextBox1.Text, TextBox2.Text, Convert.ToInt32(TextBox3.Text), TextBox4.Text);
         }
+
+        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
