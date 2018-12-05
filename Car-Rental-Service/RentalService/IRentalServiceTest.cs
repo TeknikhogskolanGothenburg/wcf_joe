@@ -104,10 +104,11 @@ namespace RentalService
 
         [OperationContract]
         List<Booking> GetBookingsByIsNotReturned();
-
-        // När kunden kvitterar ut sin hyrbil.
-        [OperationContract]
-        void GetCar(Booking booking);
         
+        [OperationContract]
+        CarInfo GetCar(CarRequest request);
+
+        [OperationContract]
+        void SaveCar(CarInfo car);
     }
 }

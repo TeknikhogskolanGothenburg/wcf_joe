@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Rental_Data;
+using Rental_Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
-using Rental_Logic;
-using Rental_Data;
+using System.Net;
+using System.ServiceModel.Web;
 
 namespace RentalService
 {
@@ -169,11 +168,38 @@ namespace RentalService
         {
             return null;
         }
-
-        // När kunden kvitterar ut sin hyrbil.
-        public void GetCar(Booking booking)
+        
+        //Message Contract Methods
+        public CarInfo GetCar(CarRequest request)
         {
+            if (request.LicenseKey != "SuperSecret123")
+            {
+                throw new WebFaultException<string>(
+                    "Wrong license key",
+                HttpStatusCode.Forbidden);
+            }
+            else
+            {
+                Car car = null;
+                
+                string id = request.CarId;
 
+                car = rentals.Cars.Where(c => c.RegNumber == id).FirstOrDefault();
+                
+                return new CarInfo(car);
+            }
+        }
+        
+        public void SaveCar(CarInfo car)
+        {
+            Car newCar = new Car();
+            newCar.RegNumber = car.RegNumber;
+            newCar.Brand = car.Brand;
+            newCar.Model = car.Model;
+            newCar.Year = car.Year;
+            newCar.IsRented = car.IsRented;
+
+            rentals.Cars.Add(newCar);               
         }
     }
 }
