@@ -201,5 +201,70 @@ namespace RentalService
 
             rentals.Cars.Add(newCar);               
         }
+
+        public CustomerInfo GetCustomer(CustomerRequest request)
+        {
+            if (request.LicenseKey != "SuperSecret123")
+            {
+                throw new WebFaultException<string>(
+                    "Wrong license key",
+                HttpStatusCode.Forbidden);
+            }
+            else
+            {
+                Customer customer = null;
+
+                int id = request.CustomerId;
+
+                customer = rentals.Customers.Where(c => c.Id == id).FirstOrDefault();
+
+                return new CustomerInfo(customer);
+            }
+        }
+
+        public void SaveCustomer(CustomerInfo customer)
+        {
+            Customer newCustomer = new Customer();
+            newCustomer.Id = customer.Id;
+            newCustomer.FirstName = customer.FirstName;
+            newCustomer.LastName = customer.LastName;
+            newCustomer.PhoneNumber = customer.PhoneNumber;
+            newCustomer.EmailAddress = customer.EmailAddress;
+
+            rentals.Customers.Add(newCustomer);
+        }
+
+        public BookingInfo GetBooking(BookingRequest request)
+        {
+            if (request.LicenseKey != "SuperSecret123")
+            {
+                throw new WebFaultException<string>(
+                    "Wrong license key",
+                HttpStatusCode.Forbidden);
+            }
+            else
+            {
+                Booking booking = null;
+                
+                string id = request.BookingId;
+
+                booking = rentals.Bookings.Where(b => b.Id == id).FirstOrDefault();
+
+                return new BookingInfo(booking);
+            }
+        }
+
+        public void SaveBooking(BookingInfo booking)
+        {
+            Booking newBooking = new Booking();
+            newBooking.Id = booking.Id;
+            newBooking.Renter = booking.Renter;
+            newBooking.RentalCar = booking.RentalCar;
+            newBooking.StartTime = booking.StartTime;
+            newBooking.EndTime = booking.EndTime;
+            newBooking.IsReturned = booking.IsReturned;
+
+            rentals.Bookings.Add(newBooking);
+        }
     }
 }

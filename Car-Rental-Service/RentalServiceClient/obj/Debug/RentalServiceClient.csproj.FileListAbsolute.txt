@@ -109,7 +109,6 @@ C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalSer
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.csprojAssemblyReference.cache
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.csproj.CoreCompileInputs.cache
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.csproj.CopyComplete
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.dll
