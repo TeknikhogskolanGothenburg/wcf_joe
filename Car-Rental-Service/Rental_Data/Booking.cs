@@ -55,22 +55,53 @@ namespace Rental_Data
     [DataContract(Namespace = "http://localhost:8080/")]
     public class Booking
     {
+        private string _id;
+        private Car _rentalCar;
+        private Customer _renter;
+        private DateTime _startTime;
+        private DateTime _endTime;
+        private bool _isReturned;
+
         [DataMember(Order = 1, Name = "ID")]
-        public string Id { get; set; }
+        public string Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
         [DataMember(Order = 2)]
-        public Car RentalCar { get; set; }
+        public Car RentalCar
+        {
+            get { return _rentalCar; }
+            set { _rentalCar = value; }
+        }
 
         [DataMember(Order = 3)]
-        public Customer Renter { get; set; }
+        public Customer Renter
+        {
+            get { return _renter; }
+            set { _renter = value; }
+        }
 
         [DataMember(Order = 4)]
-        public DateTime StartTime { get; set; }
+        public DateTime StartTime
+        {
+            get { return _startTime; }
+            set { _startTime = value; }
+        }
 
         [DataMember(Order = 5)]
-        public DateTime EndTime { get; set; }
+        public DateTime EndTime
+        {
+            get { return _endTime; }
+            set { _endTime = value; }
+        }
 
         [DataMember(Order = 6)]
-        public bool IsReturned { get; set; }
+        public bool IsReturned
+        {
+            get { return _isReturned; }
+            set { _isReturned = value; }
+        }
     }
 }

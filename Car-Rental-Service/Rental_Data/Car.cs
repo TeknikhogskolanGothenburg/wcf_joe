@@ -50,19 +50,50 @@ namespace Rental_Data
     [DataContract(Namespace = "http://localhost:8080/")]
     public class Car
     {
+        private string _regNumber;
+        private string _brand;
+        private int _year;
+        private string _model;
+        private bool _isRented;
+
         [DataMember(Order = 1, Name = "REGNUMBER")]
-        public string RegNumber { get; set; }  //ändrar till String, regnumber har bokstäver
+        public string RegNumber
+        {
+            get { return _regNumber; }
+            set { _regNumber = value; }
+        } 
+        //ändrar till String, regnumber har bokstäver
 
         [DataMember(Order = 2)]
-        public string Brand { get; set; }
+        public string Brand
+        {
+            get { return _brand; }
+            set { _brand = value; }
+        }
+
 
         [DataMember(Order = 3)]
-        public int Year { get; set; }
+        public int Year
+        {
+            get { return _year; }
+            set { _year = value; }
+        }
+
 
         [DataMember(Order = 4)]
-        public string Model { get; set; }
+        public string Model
+        {
+            get { return _model; }
+            set { _model = value; }
+        }
+
 
         [DataMember(Order = 5)]
-        public bool IsRented { get; set; }
+        public bool IsRented
+        {
+            get { return _isRented; }
+            set { _isRented = value; }
+        }
+
     }
 }
