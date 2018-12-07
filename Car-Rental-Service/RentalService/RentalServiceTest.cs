@@ -34,139 +34,160 @@ namespace RentalService
 
         public void EditCustomer(Customer customer)
         {
-
+            rentals.EditCustomer(customer);
         }
 
         public void RemoveCustomer(string firstName, string lastName, int id)
         {
-
+            rentals.RemoveCustomer(firstName, lastName, id);
         }
 
         public void AddBooking(Car rentalCar, Customer renter, DateTime startTime, DateTime endTime)
         {
-
+            rentals.AddBooking(rentalCar, renter, startTime, endTime);
         }
 
         public void RemoveBooking(string bookingId)
         {
-
+            rentals.RemoveBooking(bookingId);
         }
 
         public void ReturnCar(Booking booking)
         {
-
+            rentals.ReturnCar(booking);
         }
 
         public List<Car> CheckDate(DateTime startDate, DateTime endDate)
         {
-            return null;
+            List<Car> cars = rentals.CheckDate(startDate, endDate);
+            return cars;
         }
 
         public List<Customer> GetCustomers(string searchString)
         {
-            return null;
+            List<Customer> customers = rentals.GetCustomers(searchString);
+            return customers;
         }
 
         public Customer GetCustomerById(int id)
         {
-            return null;
+            Customer customer = rentals.GetCustomerById(id);
+            return customer;
         }
 
         public List<Customer> GetCustomersByName(string name)
         {
-            return null;
+            List<Customer> customers = rentals.GetCustomersByName(name);
+            return customers;
         }
 
         public Customer GetCustomerByPhoneNumber(string number)
         {
-            return null;
+            Customer customer = rentals.GetCustomerByPhoneNumber(number);
+            return customer; 
         }
 
         public Customer GetCustomerByEmail(string email)
         {
-            return null;
+            Customer customer = rentals.GetCustomerByEmail(email);
+            return customer;
         }
 
         public Customer GetCustomerFromBooking(Booking booking)
         {
-            return null;
+            Customer customer = rentals.GetCustomerFromBooking(booking);
+            return customer;
         }
 
         public Car GetCarByReg(string regNumber)
         {
-            return null;
+            Car car = GetCarByReg(regNumber);
+            return car;
         }
 
         public List<Car> GetCarsByBrand(string brand)
         {
-            return null;
+            List<Car> cars = rentals.GetCarsByBrand(brand);
+            return cars;
         }
 
         public List<Car> GetCarsByYear(int year)
         {
-            return null;
+            List<Car> cars = rentals.GetCarsByYear(year);
+            return cars;
         }
 
         public List<Car> GetCarsByModel(string model)
         {
-            return null;
+            List<Car> cars = rentals.GetCarsByModel(model);
+            return cars;
         }
 
         public List<Car> GetCarsByIsRented()
         {
-            return null;
+            List<Car> cars = rentals.GetCarsByIsRented();
+            return cars;
         }
 
         public Car GetCarFromBooking(Booking booking)
         {
-            return null;
+            Car car = rentals.GetCarFromBooking(booking);
+            return car;
         }
 
         public Booking GetBookingById(string bookingId)
         {
-            return null;
+            Booking booking = rentals.GetBookingById(bookingId);
+            return booking;
         }
 
         public List<Booking> GetBookingsByCar(Car car)
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByCar(car);
+            return bookings;
         }
 
         public List<Booking> GetBookingsByCustomer(Customer customer)
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByCustomer(customer);
+            return bookings;
         }
         //customer overload, most likely not needed
         public List<Booking> GetBookingsByCustomerEmail(Customer customer)
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByCustomerEmail(customer);
+            return bookings;
         }
 
         public List<Booking> GetBookingsByCustomerEmail(string email)
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByCustomerEmail(email);
+            return bookings;
         }
 
         //customer overload, most likely not needed
         public List<Booking> GetBookingsByCustomerPhone(Customer customer)
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByCustomerPhone(customer);
+            return bookings;
         }
 
         public List<Booking> GetBookingsByCustomerPhone(string phone)
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByCustomerPhone(phone);
+            return bookings;
         }
-
-        //have to test this one later
+        
         public List<Booking> GetBookingsByTime(DateTime start, DateTime end)
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByTime(start, end);
+            return bookings;
         }
 
         public List<Booking> GetBookingsByIsNotReturned()
         {
-            return null;
+            List<Booking> bookings = rentals.GetBookingsByIsNotReturned();
+            return bookings;
         }
         
         //Message Contract Methods
