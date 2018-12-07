@@ -52,7 +52,7 @@ namespace Rental_Data
         public bool IsReturned { get; set; }
     }
 
-    [DataContract(Namespace = "http://localhost:8080/")]
+    [DataContract(Namespace = "http://localhost:8080/Booking")]
     public class Booking
     {
         private string _id;

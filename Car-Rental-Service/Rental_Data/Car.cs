@@ -47,7 +47,7 @@ namespace Rental_Data
         public bool IsRented { get; set; }
     }
 
-    [DataContract(Namespace = "http://localhost:8080/")]
+    [DataContract(Namespace = "http://localhost:8080/Car")]
     public class Car
     {
         private string _regNumber;

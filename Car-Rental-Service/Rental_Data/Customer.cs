@@ -47,7 +47,7 @@ namespace Rental_Data
         public string EmailAddress { get; set; }
     }
 
-    [DataContract(Namespace = "http://localhost:8080/")]
+    [DataContract(Namespace = "http://localhost:8080/Customer")]
     public class Customer
     {
         private int _id;
