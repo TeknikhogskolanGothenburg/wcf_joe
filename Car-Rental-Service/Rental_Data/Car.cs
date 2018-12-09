@@ -56,13 +56,12 @@ namespace Rental_Data
         private string _model;
         private bool _isRented;
 
-        [DataMember(Order = 1, Name = "REGNUMBER")]
+        [DataMember(Order = 1, Name = "ID")]
         public string RegNumber
         {
             get { return _regNumber; }
             set { _regNumber = value; }
         } 
-        //ändrar till String, regnumber har bokstäver
 
         [DataMember(Order = 2)]
         public string Brand

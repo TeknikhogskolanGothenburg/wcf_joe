@@ -10,92 +10,85 @@ namespace RentalService
 {
     public class RentalServiceTest : IRentalServiceTest
     {
-        Rentals rentals = new Rentals();
-
-        public void Initialize()
-        {
-
-        }
-
         public void AddCar(string regNumber, string brand, int year, string model)
         {
-            rentals.AddCar(regNumber, brand, year, model);
+            Rentals.AddCar(regNumber, brand, year, model);
         }
 
         public void RemoveCar(string regNumber)
         {
-            rentals.RemoveCar(regNumber);
+            Rentals.RemoveCar(regNumber);
         }
 
         public void AddCustomer(string firstName, string lastName, string phoneNumber, string emailAddress)
         {
-            rentals.AddCustomer(firstName, lastName, phoneNumber, emailAddress);
+            Rentals.AddCustomer(firstName, lastName, phoneNumber, emailAddress);
         }
 
         public void EditCustomer(Customer customer)
         {
-            rentals.EditCustomer(customer);
+            Rentals.EditCustomer(customer);
         }
 
         public void RemoveCustomer(string firstName, string lastName, int id)
         {
-            rentals.RemoveCustomer(firstName, lastName, id);
+            Rentals.RemoveCustomer(firstName, lastName, id);
         }
 
         public void AddBooking(Car rentalCar, Customer renter, DateTime startTime, DateTime endTime)
         {
-            rentals.AddBooking(rentalCar, renter, startTime, endTime);
+            Rentals.AddBooking(rentalCar, renter, startTime, endTime);
         }
 
         public void RemoveBooking(string bookingId)
         {
-            rentals.RemoveBooking(bookingId);
+            Rentals.RemoveBooking(bookingId);
         }
 
         public void ReturnCar(Booking booking)
         {
-            rentals.ReturnCar(booking);
+            Rentals.ReturnCar(booking);
         }
 
         public List<Car> CheckDate(DateTime startDate, DateTime endDate)
         {
-            List<Car> cars = rentals.CheckDate(startDate, endDate);
+            List<Car> cars = Rentals.CheckDate(startDate, endDate);
             return cars;
         }
 
         public List<Customer> GetCustomers(string searchString)
         {
-            List<Customer> customers = rentals.GetCustomers(searchString);
+            List<Customer> customers = Rentals.GetCustomers(searchString);
             return customers;
         }
 
         public Customer GetCustomerById(int id)
         {
-            Customer customer = rentals.GetCustomerById(id);
+            Customer customer = Rentals.GetCustomerById(id);
             return customer;
         }
 
         public List<Customer> GetCustomersByName(string name)
         {
-            List<Customer> customers = rentals.GetCustomersByName(name);
+            List<Customer> customers = Rentals.GetCustomersByName(name);
             return customers;
         }
 
         public Customer GetCustomerByPhoneNumber(string number)
         {
-            Customer customer = rentals.GetCustomerByPhoneNumber(number);
+            Customer customer = Rentals.GetCustomerByPhoneNumber(number);
             return customer; 
         }
 
         public Customer GetCustomerByEmail(string email)
         {
-            Customer customer = rentals.GetCustomerByEmail(email);
+            Customer customer = Rentals.GetCustomerByEmail(email);
             return customer;
         }
 
         public Customer GetCustomerFromBooking(Booking booking)
         {
-            Customer customer = rentals.GetCustomerFromBooking(booking);
+            Customer customer = Rentals.GetCustomerFromBooking(booking);
             return customer;
         }
 
@@ -107,86 +100,73 @@ namespace RentalService
 
         public List<Car> GetCarsByBrand(string brand)
         {
-            List<Car> cars = rentals.GetCarsByBrand(brand);
+            List<Car> cars = Rentals.GetCarsByBrand(brand);
             return cars;
         }
 
         public List<Car> GetCarsByYear(int year)
         {
-            List<Car> cars = rentals.GetCarsByYear(year);
+            List<Car> cars = Rentals.GetCarsByYear(year);
             return cars;
         }
 
         public List<Car> GetCarsByModel(string model)
         {
-            List<Car> cars = rentals.GetCarsByModel(model);
+            List<Car> cars = Rentals.GetCarsByModel(model);
             return cars;
         }
 
         public List<Car> GetCarsByIsRented()
         {
-            List<Car> cars = rentals.GetCarsByIsRented();
+            List<Car> cars = Rentals.GetCarsByIsRented();
             return cars;
         }
 
         public Car GetCarFromBooking(Booking booking)
         {
-            Car car = rentals.GetCarFromBooking(booking);
+            Car car = Rentals.GetCarFromBooking(booking);
             return car;
         }
 
         public Booking GetBookingById(string bookingId)
         {
-            Booking booking = rentals.GetBookingById(bookingId);
+            Booking booking = Rentals.GetBookingById(bookingId);
             return booking;
         }
 
         public List<Booking> GetBookingsByCar(Car car)
         {
-            List<Booking> bookings = rentals.GetBookingsByCar(car);
+            List<Booking> bookings = Rentals.GetBookingsByCar(car);
             return bookings;
         }
 
         public List<Booking> GetBookingsByCustomer(Customer customer)
         {
-            List<Booking> bookings = rentals.GetBookingsByCustomer(customer);
-            return bookings;
-        }
-        //customer overload, most likely not needed
-        public List<Booking> GetBookingsByCustomerEmail(Customer customer)
-        {
-            List<Booking> bookings = rentals.GetBookingsByCustomerEmail(customer);
+            List<Booking> bookings = Rentals.GetBookingsByCustomer(customer);
             return bookings;
         }
 
         public List<Booking> GetBookingsByCustomerEmail(string email)
         {
-            List<Booking> bookings = rentals.GetBookingsByCustomerEmail(email);
+            List<Booking> bookings = Rentals.GetBookingsByCustomerEmail(email);
             return bookings;
         }
-
-        //customer overload, most likely not needed
-        public List<Booking> GetBookingsByCustomerPhone(Customer customer)
-        {
-            List<Booking> bookings = rentals.GetBookingsByCustomerPhone(customer);
-            return bookings;
-        }
-
+        
         public List<Booking> GetBookingsByCustomerPhone(string phone)
         {
-            List<Booking> bookings = rentals.GetBookingsByCustomerPhone(phone);
+            List<Booking> bookings = Rentals.GetBookingsByCustomerPhone(phone);
             return bookings;
         }
         
         public List<Booking> GetBookingsByTime(DateTime start, DateTime end)
         {
-            List<Booking> bookings = rentals.GetBookingsByTime(start, end);
+            List<Booking> bookings = Rentals.GetBookingsByTime(start, end);
             return bookings;
         }
 
         public List<Booking> GetBookingsByIsNotReturned()
         {
-            List<Booking> bookings = rentals.GetBookingsByIsNotReturned();
+            List<Booking> bookings = Rentals.GetBookingsByIsNotReturned();
             return bookings;
         }
         
@@ -205,7 +185,7 @@ namespace RentalService
                 
                 string id = request.CarId;
 
-                car = rentals.Cars.Where(c => c.RegNumber == id).FirstOrDefault();
+                car = Rentals.Cars.Where(c => c.RegNumber == id).FirstOrDefault();
                 
                 return new CarInfo(car);
             }
@@ -220,7 +200,7 @@ namespace RentalService
             newCar.Year = car.Year;
             newCar.IsRented = car.IsRented;
 
-            rentals.Cars.Add(newCar);               
+            Rentals.Cars.Add(newCar);               
         }
 
         public CustomerInfo GetCustomer(CustomerRequest request)
@@ -237,7 +217,7 @@ namespace RentalService
 
                 int id = request.CustomerId;
 
-                customer = rentals.Customers.Where(c => c.Id == id).FirstOrDefault();
+                customer = Rentals.Customers.Where(c => c.Id == id).FirstOrDefault();
 
                 return new CustomerInfo(customer);
             }
@@ -252,7 +232,7 @@ namespace RentalService
             newCustomer.PhoneNumber = customer.PhoneNumber;
             newCustomer.EmailAddress = customer.EmailAddress;
 
-            rentals.Customers.Add(newCustomer);
+            Rentals.Customers.Add(newCustomer);
         }
 
         public BookingInfo GetBooking(BookingRequest request)
@@ -269,7 +249,7 @@ namespace RentalService
                 
                 string id = request.BookingId;
 
-                booking = rentals.Bookings.Where(b => b.Id == id).FirstOrDefault();
+                booking = Rentals.Bookings.Where(b => b.Id == id).FirstOrDefault();
 
                 return new BookingInfo(booking);
             }
@@ -285,7 +265,7 @@ namespace RentalService
             newBooking.EndTime = booking.EndTime;
             newBooking.IsReturned = booking.IsReturned;
 
-            rentals.Bookings.Add(newBooking);
+            Rentals.Bookings.Add(newBooking);
         }
     }
 }

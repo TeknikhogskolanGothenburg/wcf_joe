@@ -113,3 +113,4 @@ C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalSer
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.csproj.CopyComplete
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.dll
 C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.pdb
+C:\Users\JoeKH_000\Source\Repos\CarRentalServiceWCF\Car-Rental-Service\RentalServiceClient\obj\Debug\RentalServiceClient.csprojAssemblyReference.cache
