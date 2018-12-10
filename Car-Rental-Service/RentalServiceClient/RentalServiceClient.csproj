@@ -83,19 +83,94 @@
     <None Include="Connected Services\RentalService\item4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.Booking.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.Car.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.CarInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.Customer.datasource">
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.SaveCarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.SaveCarResponse.datasource">
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.AddBookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.AddCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.AddCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.CheckDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.EditCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetBookingByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetBookingsByCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetBookingsByCustomerEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetBookingsByCustomerPhoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetBookingsByCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetBookingsByIsNotReturnedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetBookingsByTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCarByRegResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCarFromBookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCarsByBrandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCarsByIsRentedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCarsByModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCarsByYearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCustomerByEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCustomerByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCustomerByPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCustomerFromBookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCustomersByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.GetCustomersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.RemoveBookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.RemoveCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.RemoveCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.ReturnCarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\RentalService\RentalServiceTest.wsdl" />

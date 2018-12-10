@@ -6,7 +6,6 @@ using System.Linq;
 namespace Rental_Logic
 {
     //Would not use static if using database or textfile. Hard coding collections just for project.
-    //
     public static class Rentals
     {
         public static List<Car> Cars = new List<Car>();

@@ -173,10 +173,10 @@ namespace RentalService
         //Message Contract Methods
         public CarInfo GetCar(CarRequest request)
         {
-            if (request.LicenseKey != "SuperSecret123")
+            if (request.LicenseKey != "JoJosBizarre!!")
             {
                 throw new WebFaultException<string>(
-                    "Wrong license key",
+                    "Incorrect license key",
                 HttpStatusCode.Forbidden);
             }
             else
@@ -205,10 +205,10 @@ namespace RentalService
 
         public CustomerInfo GetCustomer(CustomerRequest request)
         {
-            if (request.LicenseKey != "SuperSecret123")
+            if (request.LicenseKey != "JoJosBizarre!!")
             {
                 throw new WebFaultException<string>(
-                    "Wrong license key",
+                    "Incorrect license key",
                 HttpStatusCode.Forbidden);
             }
             else
@@ -237,10 +237,10 @@ namespace RentalService
 
         public BookingInfo GetBooking(BookingRequest request)
         {
-            if (request.LicenseKey != "SuperSecret123")
+            if (request.LicenseKey != "JoJosBizarre!!")
             {
                 throw new WebFaultException<string>(
-                    "Wrong license key",
+                    "Incorrect license key",
                 HttpStatusCode.Forbidden);
             }
             else

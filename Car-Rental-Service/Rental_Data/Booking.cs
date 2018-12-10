@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.Net.Security;
 
 namespace Rental_Data
 {
@@ -9,7 +10,7 @@ namespace Rental_Data
         WrapperNamespace = "http://localhost:8080/Booking")]
     public class BookingRequest
     {
-        [MessageHeader(Namespace = "http://localhost:8080/Booking")]
+        [MessageHeader(Namespace = "http://localhost:8080/Booking", ProtectionLevel = ProtectionLevel.EncryptAndSign)]
         public string LicenseKey { get; set; }
 
         [MessageBodyMember(Namespace = "http://localhost:8080/Booking")]

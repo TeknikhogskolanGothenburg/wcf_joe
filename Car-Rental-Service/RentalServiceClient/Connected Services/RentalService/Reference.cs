@@ -132,7 +132,7 @@ namespace RentalServiceClient.RentalService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string REGNUMBERField;
+        private string IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BrandField;
@@ -157,14 +157,14 @@ namespace RentalServiceClient.RentalService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string REGNUMBER {
+        public string ID {
             get {
-                return this.REGNUMBERField;
+                return this.IDField;
             }
             set {
-                if ((object.ReferenceEquals(this.REGNUMBERField, value) != true)) {
-                    this.REGNUMBERField = value;
-                    this.RaisePropertyChanged("REGNUMBER");
+                if ((object.ReferenceEquals(this.IDField, value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
                 }
             }
         }
@@ -361,186 +361,1062 @@ namespace RentalServiceClient.RentalService {
     public interface IRentalServiceTest {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddCar", ReplyAction="http://tempuri.org/IRentalServiceTest/AddCarResponse")]
-        void AddCar(string regNumber, string brand, int year, string model);
+        RentalServiceClient.RentalService.AddCarResponse AddCar(RentalServiceClient.RentalService.AddCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddCar", ReplyAction="http://tempuri.org/IRentalServiceTest/AddCarResponse")]
-        System.Threading.Tasks.Task AddCarAsync(string regNumber, string brand, int year, string model);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.AddCarResponse> AddCarAsync(RentalServiceClient.RentalService.AddCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/RemoveCar", ReplyAction="http://tempuri.org/IRentalServiceTest/RemoveCarResponse")]
-        void RemoveCar(string regNumber);
+        RentalServiceClient.RentalService.RemoveCarResponse RemoveCar(RentalServiceClient.RentalService.RemoveCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/RemoveCar", ReplyAction="http://tempuri.org/IRentalServiceTest/RemoveCarResponse")]
-        System.Threading.Tasks.Task RemoveCarAsync(string regNumber);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.RemoveCarResponse> RemoveCarAsync(RentalServiceClient.RentalService.RemoveCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/AddCustomerResponse")]
-        void AddCustomer(string firstName, string lastName, string phoneNumber, string emailAddress);
+        RentalServiceClient.RentalService.AddCustomerResponse AddCustomer(RentalServiceClient.RentalService.AddCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/AddCustomerResponse")]
-        System.Threading.Tasks.Task AddCustomerAsync(string firstName, string lastName, string phoneNumber, string emailAddress);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.AddCustomerResponse> AddCustomerAsync(RentalServiceClient.RentalService.AddCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/EditCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/EditCustomerResponse")]
-        void EditCustomer(RentalServiceClient.RentalService.Customer customer);
+        RentalServiceClient.RentalService.EditCustomerResponse EditCustomer(RentalServiceClient.RentalService.EditCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/EditCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/EditCustomerResponse")]
-        System.Threading.Tasks.Task EditCustomerAsync(RentalServiceClient.RentalService.Customer customer);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.EditCustomerResponse> EditCustomerAsync(RentalServiceClient.RentalService.EditCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/RemoveCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/RemoveCustomerResponse")]
-        void RemoveCustomer(string firstName, string lastName, int id);
+        RentalServiceClient.RentalService.RemoveCustomerResponse RemoveCustomer(RentalServiceClient.RentalService.RemoveCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/RemoveCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/RemoveCustomerResponse")]
-        System.Threading.Tasks.Task RemoveCustomerAsync(string firstName, string lastName, int id);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.RemoveCustomerResponse> RemoveCustomerAsync(RentalServiceClient.RentalService.RemoveCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/AddBookingResponse")]
-        void AddBooking(RentalServiceClient.RentalService.Car rentalCar, RentalServiceClient.RentalService.Customer renter, System.DateTime startTime, System.DateTime endTime);
+        RentalServiceClient.RentalService.AddBookingResponse AddBooking(RentalServiceClient.RentalService.AddBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/AddBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/AddBookingResponse")]
-        System.Threading.Tasks.Task AddBookingAsync(RentalServiceClient.RentalService.Car rentalCar, RentalServiceClient.RentalService.Customer renter, System.DateTime startTime, System.DateTime endTime);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.AddBookingResponse> AddBookingAsync(RentalServiceClient.RentalService.AddBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/RemoveBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/RemoveBookingResponse")]
-        void RemoveBooking(string bookingId);
+        RentalServiceClient.RentalService.RemoveBookingResponse RemoveBooking(RentalServiceClient.RentalService.RemoveBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/RemoveBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/RemoveBookingResponse")]
-        System.Threading.Tasks.Task RemoveBookingAsync(string bookingId);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.RemoveBookingResponse> RemoveBookingAsync(RentalServiceClient.RentalService.RemoveBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/ReturnCar", ReplyAction="http://tempuri.org/IRentalServiceTest/ReturnCarResponse")]
-        void ReturnCar(RentalServiceClient.RentalService.Booking booking);
+        RentalServiceClient.RentalService.ReturnCarResponse ReturnCar(RentalServiceClient.RentalService.ReturnCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/ReturnCar", ReplyAction="http://tempuri.org/IRentalServiceTest/ReturnCarResponse")]
-        System.Threading.Tasks.Task ReturnCarAsync(RentalServiceClient.RentalService.Booking booking);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.ReturnCarResponse> ReturnCarAsync(RentalServiceClient.RentalService.ReturnCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/CheckDate", ReplyAction="http://tempuri.org/IRentalServiceTest/CheckDateResponse")]
-        RentalServiceClient.RentalService.Car[] CheckDate(System.DateTime startDate, System.DateTime endDate);
+        RentalServiceClient.RentalService.CheckDateResponse CheckDate(RentalServiceClient.RentalService.CheckDateRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/CheckDate", ReplyAction="http://tempuri.org/IRentalServiceTest/CheckDateResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> CheckDateAsync(System.DateTime startDate, System.DateTime endDate);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.CheckDateResponse> CheckDateAsync(RentalServiceClient.RentalService.CheckDateRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomers", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomersResponse")]
-        RentalServiceClient.RentalService.Customer[] GetCustomers(string searchString);
+        RentalServiceClient.RentalService.GetCustomersResponse GetCustomers(RentalServiceClient.RentalService.GetCustomersRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomers", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomersResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer[]> GetCustomersAsync(string searchString);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomersResponse> GetCustomersAsync(RentalServiceClient.RentalService.GetCustomersRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerById", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerByIdResponse")]
-        RentalServiceClient.RentalService.Customer GetCustomerById(int id);
+        RentalServiceClient.RentalService.GetCustomerByIdResponse GetCustomerById(RentalServiceClient.RentalService.GetCustomerByIdRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerById", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerByIdResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerByIdAsync(int id);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerByIdResponse> GetCustomerByIdAsync(RentalServiceClient.RentalService.GetCustomerByIdRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomersByName", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomersByNameResponse")]
-        RentalServiceClient.RentalService.Customer[] GetCustomersByName(string name);
+        RentalServiceClient.RentalService.GetCustomersByNameResponse GetCustomersByName(RentalServiceClient.RentalService.GetCustomersByNameRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomersByName", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomersByNameResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer[]> GetCustomersByNameAsync(string name);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomersByNameResponse> GetCustomersByNameAsync(RentalServiceClient.RentalService.GetCustomersByNameRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerByPhoneNumber", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerByPhoneNumberResponse")]
-        RentalServiceClient.RentalService.Customer GetCustomerByPhoneNumber(string number);
+        RentalServiceClient.RentalService.GetCustomerByPhoneNumberResponse GetCustomerByPhoneNumber(RentalServiceClient.RentalService.GetCustomerByPhoneNumberRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerByPhoneNumber", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerByPhoneNumberResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerByPhoneNumberAsync(string number);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerByPhoneNumberResponse> GetCustomerByPhoneNumberAsync(RentalServiceClient.RentalService.GetCustomerByPhoneNumberRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerByEmail", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerByEmailResponse")]
-        RentalServiceClient.RentalService.Customer GetCustomerByEmail(string email);
+        RentalServiceClient.RentalService.GetCustomerByEmailResponse GetCustomerByEmail(RentalServiceClient.RentalService.GetCustomerByEmailRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerByEmail", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerByEmailResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerByEmailAsync(string email);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerByEmailResponse> GetCustomerByEmailAsync(RentalServiceClient.RentalService.GetCustomerByEmailRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerFromBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerFromBookingResponse")]
-        RentalServiceClient.RentalService.Customer GetCustomerFromBooking(RentalServiceClient.RentalService.Booking booking);
+        RentalServiceClient.RentalService.GetCustomerFromBookingResponse GetCustomerFromBooking(RentalServiceClient.RentalService.GetCustomerFromBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCustomerFromBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCustomerFromBookingResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerFromBookingAsync(RentalServiceClient.RentalService.Booking booking);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerFromBookingResponse> GetCustomerFromBookingAsync(RentalServiceClient.RentalService.GetCustomerFromBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarByReg", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarByRegResponse")]
-        RentalServiceClient.RentalService.Car GetCarByReg(string regNumber);
+        RentalServiceClient.RentalService.GetCarByRegResponse GetCarByReg(RentalServiceClient.RentalService.GetCarByRegRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarByReg", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarByRegResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car> GetCarByRegAsync(string regNumber);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarByRegResponse> GetCarByRegAsync(RentalServiceClient.RentalService.GetCarByRegRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByBrand", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByBrandResponse")]
-        RentalServiceClient.RentalService.Car[] GetCarsByBrand(string brand);
+        RentalServiceClient.RentalService.GetCarsByBrandResponse GetCarsByBrand(RentalServiceClient.RentalService.GetCarsByBrandRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByBrand", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByBrandResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByBrandAsync(string brand);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByBrandResponse> GetCarsByBrandAsync(RentalServiceClient.RentalService.GetCarsByBrandRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByYear", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByYearResponse")]
-        RentalServiceClient.RentalService.Car[] GetCarsByYear(int year);
+        RentalServiceClient.RentalService.GetCarsByYearResponse GetCarsByYear(RentalServiceClient.RentalService.GetCarsByYearRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByYear", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByYearResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByYearAsync(int year);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByYearResponse> GetCarsByYearAsync(RentalServiceClient.RentalService.GetCarsByYearRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByModel", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByModelResponse")]
-        RentalServiceClient.RentalService.Car[] GetCarsByModel(string model);
+        RentalServiceClient.RentalService.GetCarsByModelResponse GetCarsByModel(RentalServiceClient.RentalService.GetCarsByModelRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByModel", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByModelResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByModelAsync(string model);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByModelResponse> GetCarsByModelAsync(RentalServiceClient.RentalService.GetCarsByModelRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByIsRented", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByIsRentedResponse")]
-        RentalServiceClient.RentalService.Car[] GetCarsByIsRented();
+        RentalServiceClient.RentalService.GetCarsByIsRentedResponse GetCarsByIsRented(RentalServiceClient.RentalService.GetCarsByIsRentedRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarsByIsRented", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarsByIsRentedResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByIsRentedAsync();
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByIsRentedResponse> GetCarsByIsRentedAsync(RentalServiceClient.RentalService.GetCarsByIsRentedRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarFromBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarFromBookingResponse")]
-        RentalServiceClient.RentalService.Car GetCarFromBooking(RentalServiceClient.RentalService.Booking booking);
+        RentalServiceClient.RentalService.GetCarFromBookingResponse GetCarFromBooking(RentalServiceClient.RentalService.GetCarFromBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCarFromBooking", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarFromBookingResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car> GetCarFromBookingAsync(RentalServiceClient.RentalService.Booking booking);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarFromBookingResponse> GetCarFromBookingAsync(RentalServiceClient.RentalService.GetCarFromBookingRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingById", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingByIdResponse")]
-        RentalServiceClient.RentalService.Booking GetBookingById(string bookingId);
+        RentalServiceClient.RentalService.GetBookingByIdResponse GetBookingById(RentalServiceClient.RentalService.GetBookingByIdRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingById", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingByIdResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking> GetBookingByIdAsync(string bookingId);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingByIdResponse> GetBookingByIdAsync(RentalServiceClient.RentalService.GetBookingByIdRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCar", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCarResponse")]
-        RentalServiceClient.RentalService.Booking[] GetBookingsByCar(RentalServiceClient.RentalService.Car car);
+        RentalServiceClient.RentalService.GetBookingsByCarResponse GetBookingsByCar(RentalServiceClient.RentalService.GetBookingsByCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCar", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCarResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCarAsync(RentalServiceClient.RentalService.Car car);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCarResponse> GetBookingsByCarAsync(RentalServiceClient.RentalService.GetBookingsByCarRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerResponse")]
-        RentalServiceClient.RentalService.Booking[] GetBookingsByCustomer(RentalServiceClient.RentalService.Customer customer);
+        RentalServiceClient.RentalService.GetBookingsByCustomerResponse GetBookingsByCustomer(RentalServiceClient.RentalService.GetBookingsByCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomer", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCustomerAsync(RentalServiceClient.RentalService.Customer customer);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCustomerResponse> GetBookingsByCustomerAsync(RentalServiceClient.RentalService.GetBookingsByCustomerRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerEmail", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerEmailResponse")]
-        RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerEmail(string email);
+        RentalServiceClient.RentalService.GetBookingsByCustomerEmailResponse GetBookingsByCustomerEmail(RentalServiceClient.RentalService.GetBookingsByCustomerEmailRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerEmail", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerEmailResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCustomerEmailAsync(string email);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCustomerEmailResponse> GetBookingsByCustomerEmailAsync(RentalServiceClient.RentalService.GetBookingsByCustomerEmailRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerPhone", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerPhoneResponse")]
-        RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerPhone(string phone);
+        RentalServiceClient.RentalService.GetBookingsByCustomerPhoneResponse GetBookingsByCustomerPhone(RentalServiceClient.RentalService.GetBookingsByCustomerPhoneRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerPhone", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByCustomerPhoneResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCustomerPhoneAsync(string phone);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCustomerPhoneResponse> GetBookingsByCustomerPhoneAsync(RentalServiceClient.RentalService.GetBookingsByCustomerPhoneRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByTime", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByTimeResponse")]
-        RentalServiceClient.RentalService.Booking[] GetBookingsByTime(System.DateTime start, System.DateTime end);
+        RentalServiceClient.RentalService.GetBookingsByTimeResponse GetBookingsByTime(RentalServiceClient.RentalService.GetBookingsByTimeRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByTime", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByTimeResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByTimeAsync(System.DateTime start, System.DateTime end);
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByTimeResponse> GetBookingsByTimeAsync(RentalServiceClient.RentalService.GetBookingsByTimeRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByIsNotReturned", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByIsNotReturnedResponse")]
-        RentalServiceClient.RentalService.Booking[] GetBookingsByIsNotReturned();
+        RentalServiceClient.RentalService.GetBookingsByIsNotReturnedResponse GetBookingsByIsNotReturned(RentalServiceClient.RentalService.GetBookingsByIsNotReturnedRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetBookingsByIsNotReturned", ReplyAction="http://tempuri.org/IRentalServiceTest/GetBookingsByIsNotReturnedResponse")]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByIsNotReturnedAsync();
+        System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByIsNotReturnedResponse> GetBookingsByIsNotReturnedAsync(RentalServiceClient.RentalService.GetBookingsByIsNotReturnedRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCar", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarResponse")]
         RentalServiceClient.RentalService.CarInfo GetCar(RentalServiceClient.RentalService.CarRequest request);
         
-        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/GetCar", ReplyAction="http://tempuri.org/IRentalServiceTest/GetCarResponse")]
         System.Threading.Tasks.Task<RentalServiceClient.RentalService.CarInfo> GetCarAsync(RentalServiceClient.RentalService.CarRequest request);
         
-        // CODEGEN: Generating message contract since the operation SaveCar is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/SaveCar", ReplyAction="http://tempuri.org/IRentalServiceTest/SaveCarResponse")]
         RentalServiceClient.RentalService.SaveCarResponse SaveCar(RentalServiceClient.RentalService.CarInfo request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRentalServiceTest/SaveCar", ReplyAction="http://tempuri.org/IRentalServiceTest/SaveCarResponse")]
         System.Threading.Tasks.Task<RentalServiceClient.RentalService.SaveCarResponse> SaveCarAsync(RentalServiceClient.RentalService.CarInfo request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCar", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddCarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string regNumber;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string brand;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public int year;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public string model;
+        
+        public AddCarRequest() {
+        }
+        
+        public AddCarRequest(string regNumber, string brand, int year, string model) {
+            this.regNumber = regNumber;
+            this.brand = brand;
+            this.year = year;
+            this.model = model;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCarResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddCarResponse {
+        
+        public AddCarResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveCar", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class RemoveCarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string regNumber;
+        
+        public RemoveCarRequest() {
+        }
+        
+        public RemoveCarRequest(string regNumber) {
+            this.regNumber = regNumber;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveCarResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class RemoveCarResponse {
+        
+        public RemoveCarResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCustomer", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string firstName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string lastName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public string phoneNumber;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public string emailAddress;
+        
+        public AddCustomerRequest() {
+        }
+        
+        public AddCustomerRequest(string firstName, string lastName, string phoneNumber, string emailAddress) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.phoneNumber = phoneNumber;
+            this.emailAddress = emailAddress;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCustomerResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddCustomerResponse {
+        
+        public AddCustomerResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditCustomer", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer customer;
+        
+        public EditCustomerRequest() {
+        }
+        
+        public EditCustomerRequest(RentalServiceClient.RentalService.Customer customer) {
+            this.customer = customer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditCustomerResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditCustomerResponse {
+        
+        public EditCustomerResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveCustomer", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class RemoveCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string firstName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string lastName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public int id;
+        
+        public RemoveCustomerRequest() {
+        }
+        
+        public RemoveCustomerRequest(string firstName, string lastName, int id) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveCustomerResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class RemoveCustomerResponse {
+        
+        public RemoveCustomerResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddBooking", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddBookingRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car rentalCar;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public RentalServiceClient.RentalService.Customer renter;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public System.DateTime startTime;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public System.DateTime endTime;
+        
+        public AddBookingRequest() {
+        }
+        
+        public AddBookingRequest(RentalServiceClient.RentalService.Car rentalCar, RentalServiceClient.RentalService.Customer renter, System.DateTime startTime, System.DateTime endTime) {
+            this.rentalCar = rentalCar;
+            this.renter = renter;
+            this.startTime = startTime;
+            this.endTime = endTime;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddBookingResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddBookingResponse {
+        
+        public AddBookingResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveBooking", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class RemoveBookingRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string bookingId;
+        
+        public RemoveBookingRequest() {
+        }
+        
+        public RemoveBookingRequest(string bookingId) {
+            this.bookingId = bookingId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveBookingResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class RemoveBookingResponse {
+        
+        public RemoveBookingResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReturnCar", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ReturnCarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking booking;
+        
+        public ReturnCarRequest() {
+        }
+        
+        public ReturnCarRequest(RentalServiceClient.RentalService.Booking booking) {
+            this.booking = booking;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReturnCarResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ReturnCarResponse {
+        
+        public ReturnCarResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckDate", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class CheckDateRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.DateTime startDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public System.DateTime endDate;
+        
+        public CheckDateRequest() {
+        }
+        
+        public CheckDateRequest(System.DateTime startDate, System.DateTime endDate) {
+            this.startDate = startDate;
+            this.endDate = endDate;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckDateResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class CheckDateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car[] CheckDateResult;
+        
+        public CheckDateResponse() {
+        }
+        
+        public CheckDateResponse(RentalServiceClient.RentalService.Car[] CheckDateResult) {
+            this.CheckDateResult = CheckDateResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomers", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomersRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string searchString;
+        
+        public GetCustomersRequest() {
+        }
+        
+        public GetCustomersRequest(string searchString) {
+            this.searchString = searchString;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomersResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomersResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer[] GetCustomersResult;
+        
+        public GetCustomersResponse() {
+        }
+        
+        public GetCustomersResponse(RentalServiceClient.RentalService.Customer[] GetCustomersResult) {
+            this.GetCustomersResult = GetCustomersResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerById", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public GetCustomerByIdRequest() {
+        }
+        
+        public GetCustomerByIdRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerByIdResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer GetCustomerByIdResult;
+        
+        public GetCustomerByIdResponse() {
+        }
+        
+        public GetCustomerByIdResponse(RentalServiceClient.RentalService.Customer GetCustomerByIdResult) {
+            this.GetCustomerByIdResult = GetCustomerByIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomersByName", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomersByNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string name;
+        
+        public GetCustomersByNameRequest() {
+        }
+        
+        public GetCustomersByNameRequest(string name) {
+            this.name = name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomersByNameResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomersByNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer[] GetCustomersByNameResult;
+        
+        public GetCustomersByNameResponse() {
+        }
+        
+        public GetCustomersByNameResponse(RentalServiceClient.RentalService.Customer[] GetCustomersByNameResult) {
+            this.GetCustomersByNameResult = GetCustomersByNameResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerByPhoneNumber", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerByPhoneNumberRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string number;
+        
+        public GetCustomerByPhoneNumberRequest() {
+        }
+        
+        public GetCustomerByPhoneNumberRequest(string number) {
+            this.number = number;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerByPhoneNumberResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerByPhoneNumberResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer GetCustomerByPhoneNumberResult;
+        
+        public GetCustomerByPhoneNumberResponse() {
+        }
+        
+        public GetCustomerByPhoneNumberResponse(RentalServiceClient.RentalService.Customer GetCustomerByPhoneNumberResult) {
+            this.GetCustomerByPhoneNumberResult = GetCustomerByPhoneNumberResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerByEmail", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerByEmailRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string email;
+        
+        public GetCustomerByEmailRequest() {
+        }
+        
+        public GetCustomerByEmailRequest(string email) {
+            this.email = email;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerByEmailResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerByEmailResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer GetCustomerByEmailResult;
+        
+        public GetCustomerByEmailResponse() {
+        }
+        
+        public GetCustomerByEmailResponse(RentalServiceClient.RentalService.Customer GetCustomerByEmailResult) {
+            this.GetCustomerByEmailResult = GetCustomerByEmailResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerFromBooking", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerFromBookingRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking booking;
+        
+        public GetCustomerFromBookingRequest() {
+        }
+        
+        public GetCustomerFromBookingRequest(RentalServiceClient.RentalService.Booking booking) {
+            this.booking = booking;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCustomerFromBookingResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCustomerFromBookingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer GetCustomerFromBookingResult;
+        
+        public GetCustomerFromBookingResponse() {
+        }
+        
+        public GetCustomerFromBookingResponse(RentalServiceClient.RentalService.Customer GetCustomerFromBookingResult) {
+            this.GetCustomerFromBookingResult = GetCustomerFromBookingResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarByReg", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarByRegRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string regNumber;
+        
+        public GetCarByRegRequest() {
+        }
+        
+        public GetCarByRegRequest(string regNumber) {
+            this.regNumber = regNumber;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarByRegResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarByRegResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car GetCarByRegResult;
+        
+        public GetCarByRegResponse() {
+        }
+        
+        public GetCarByRegResponse(RentalServiceClient.RentalService.Car GetCarByRegResult) {
+            this.GetCarByRegResult = GetCarByRegResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByBrand", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByBrandRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string brand;
+        
+        public GetCarsByBrandRequest() {
+        }
+        
+        public GetCarsByBrandRequest(string brand) {
+            this.brand = brand;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByBrandResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByBrandResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car[] GetCarsByBrandResult;
+        
+        public GetCarsByBrandResponse() {
+        }
+        
+        public GetCarsByBrandResponse(RentalServiceClient.RentalService.Car[] GetCarsByBrandResult) {
+            this.GetCarsByBrandResult = GetCarsByBrandResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByYear", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByYearRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int year;
+        
+        public GetCarsByYearRequest() {
+        }
+        
+        public GetCarsByYearRequest(int year) {
+            this.year = year;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByYearResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByYearResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car[] GetCarsByYearResult;
+        
+        public GetCarsByYearResponse() {
+        }
+        
+        public GetCarsByYearResponse(RentalServiceClient.RentalService.Car[] GetCarsByYearResult) {
+            this.GetCarsByYearResult = GetCarsByYearResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByModel", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByModelRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string model;
+        
+        public GetCarsByModelRequest() {
+        }
+        
+        public GetCarsByModelRequest(string model) {
+            this.model = model;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByModelResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByModelResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car[] GetCarsByModelResult;
+        
+        public GetCarsByModelResponse() {
+        }
+        
+        public GetCarsByModelResponse(RentalServiceClient.RentalService.Car[] GetCarsByModelResult) {
+            this.GetCarsByModelResult = GetCarsByModelResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByIsRented", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByIsRentedRequest {
+        
+        public GetCarsByIsRentedRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarsByIsRentedResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarsByIsRentedResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car[] GetCarsByIsRentedResult;
+        
+        public GetCarsByIsRentedResponse() {
+        }
+        
+        public GetCarsByIsRentedResponse(RentalServiceClient.RentalService.Car[] GetCarsByIsRentedResult) {
+            this.GetCarsByIsRentedResult = GetCarsByIsRentedResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarFromBooking", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarFromBookingRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking booking;
+        
+        public GetCarFromBookingRequest() {
+        }
+        
+        public GetCarFromBookingRequest(RentalServiceClient.RentalService.Booking booking) {
+            this.booking = booking;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarFromBookingResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCarFromBookingResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car GetCarFromBookingResult;
+        
+        public GetCarFromBookingResponse() {
+        }
+        
+        public GetCarFromBookingResponse(RentalServiceClient.RentalService.Car GetCarFromBookingResult) {
+            this.GetCarFromBookingResult = GetCarFromBookingResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingById", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string bookingId;
+        
+        public GetBookingByIdRequest() {
+        }
+        
+        public GetBookingByIdRequest(string bookingId) {
+            this.bookingId = bookingId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingByIdResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking GetBookingByIdResult;
+        
+        public GetBookingByIdResponse() {
+        }
+        
+        public GetBookingByIdResponse(RentalServiceClient.RentalService.Booking GetBookingByIdResult) {
+            this.GetBookingByIdResult = GetBookingByIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCar", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Car car;
+        
+        public GetBookingsByCarRequest() {
+        }
+        
+        public GetBookingsByCarRequest(RentalServiceClient.RentalService.Car car) {
+            this.car = car;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCarResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking[] GetBookingsByCarResult;
+        
+        public GetBookingsByCarResponse() {
+        }
+        
+        public GetBookingsByCarResponse(RentalServiceClient.RentalService.Booking[] GetBookingsByCarResult) {
+            this.GetBookingsByCarResult = GetBookingsByCarResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCustomer", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Customer customer;
+        
+        public GetBookingsByCustomerRequest() {
+        }
+        
+        public GetBookingsByCustomerRequest(RentalServiceClient.RentalService.Customer customer) {
+            this.customer = customer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCustomerResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCustomerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerResult;
+        
+        public GetBookingsByCustomerResponse() {
+        }
+        
+        public GetBookingsByCustomerResponse(RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerResult) {
+            this.GetBookingsByCustomerResult = GetBookingsByCustomerResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCustomerEmail", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCustomerEmailRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string email;
+        
+        public GetBookingsByCustomerEmailRequest() {
+        }
+        
+        public GetBookingsByCustomerEmailRequest(string email) {
+            this.email = email;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCustomerEmailResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCustomerEmailResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerEmailResult;
+        
+        public GetBookingsByCustomerEmailResponse() {
+        }
+        
+        public GetBookingsByCustomerEmailResponse(RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerEmailResult) {
+            this.GetBookingsByCustomerEmailResult = GetBookingsByCustomerEmailResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCustomerPhone", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCustomerPhoneRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string phone;
+        
+        public GetBookingsByCustomerPhoneRequest() {
+        }
+        
+        public GetBookingsByCustomerPhoneRequest(string phone) {
+            this.phone = phone;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByCustomerPhoneResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByCustomerPhoneResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerPhoneResult;
+        
+        public GetBookingsByCustomerPhoneResponse() {
+        }
+        
+        public GetBookingsByCustomerPhoneResponse(RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerPhoneResult) {
+            this.GetBookingsByCustomerPhoneResult = GetBookingsByCustomerPhoneResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByTime", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByTimeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.DateTime start;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public System.DateTime end;
+        
+        public GetBookingsByTimeRequest() {
+        }
+        
+        public GetBookingsByTimeRequest(System.DateTime start, System.DateTime end) {
+            this.start = start;
+            this.end = end;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByTimeResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByTimeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking[] GetBookingsByTimeResult;
+        
+        public GetBookingsByTimeResponse() {
+        }
+        
+        public GetBookingsByTimeResponse(RentalServiceClient.RentalService.Booking[] GetBookingsByTimeResult) {
+            this.GetBookingsByTimeResult = GetBookingsByTimeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByIsNotReturned", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByIsNotReturnedRequest {
+        
+        public GetBookingsByIsNotReturnedRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookingsByIsNotReturnedResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetBookingsByIsNotReturnedResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public RentalServiceClient.RentalService.Booking[] GetBookingsByIsNotReturnedResult;
+        
+        public GetBookingsByIsNotReturnedResponse() {
+        }
+        
+        public GetBookingsByIsNotReturnedResponse(RentalServiceClient.RentalService.Booking[] GetBookingsByIsNotReturnedResult) {
+            this.GetBookingsByIsNotReturnedResult = GetBookingsByIsNotReturnedResult;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -597,7 +1473,6 @@ namespace RentalServiceClient.RentalService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class SaveCarResponse {
         
@@ -632,279 +1507,244 @@ namespace RentalServiceClient.RentalService {
                 base(binding, remoteAddress) {
         }
         
-        public void AddCar(string regNumber, string brand, int year, string model) {
-            base.Channel.AddCar(regNumber, brand, year, model);
+        public RentalServiceClient.RentalService.AddCarResponse AddCar(RentalServiceClient.RentalService.AddCarRequest request) {
+            return base.Channel.AddCar(request);
         }
         
-        public System.Threading.Tasks.Task AddCarAsync(string regNumber, string brand, int year, string model) {
-            return base.Channel.AddCarAsync(regNumber, brand, year, model);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.AddCarResponse> AddCarAsync(RentalServiceClient.RentalService.AddCarRequest request) {
+            return base.Channel.AddCarAsync(request);
         }
         
-        public void RemoveCar(string regNumber) {
-            base.Channel.RemoveCar(regNumber);
+        public RentalServiceClient.RentalService.RemoveCarResponse RemoveCar(RentalServiceClient.RentalService.RemoveCarRequest request) {
+            return base.Channel.RemoveCar(request);
         }
         
-        public System.Threading.Tasks.Task RemoveCarAsync(string regNumber) {
-            return base.Channel.RemoveCarAsync(regNumber);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.RemoveCarResponse> RemoveCarAsync(RentalServiceClient.RentalService.RemoveCarRequest request) {
+            return base.Channel.RemoveCarAsync(request);
         }
         
-        public void AddCustomer(string firstName, string lastName, string phoneNumber, string emailAddress) {
-            base.Channel.AddCustomer(firstName, lastName, phoneNumber, emailAddress);
+        public RentalServiceClient.RentalService.AddCustomerResponse AddCustomer(RentalServiceClient.RentalService.AddCustomerRequest request) {
+            return base.Channel.AddCustomer(request);
         }
         
-        public System.Threading.Tasks.Task AddCustomerAsync(string firstName, string lastName, string phoneNumber, string emailAddress) {
-            return base.Channel.AddCustomerAsync(firstName, lastName, phoneNumber, emailAddress);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.AddCustomerResponse> AddCustomerAsync(RentalServiceClient.RentalService.AddCustomerRequest request) {
+            return base.Channel.AddCustomerAsync(request);
         }
         
-        public void EditCustomer(RentalServiceClient.RentalService.Customer customer) {
-            base.Channel.EditCustomer(customer);
+        public RentalServiceClient.RentalService.EditCustomerResponse EditCustomer(RentalServiceClient.RentalService.EditCustomerRequest request) {
+            return base.Channel.EditCustomer(request);
         }
         
-        public System.Threading.Tasks.Task EditCustomerAsync(RentalServiceClient.RentalService.Customer customer) {
-            return base.Channel.EditCustomerAsync(customer);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.EditCustomerResponse> EditCustomerAsync(RentalServiceClient.RentalService.EditCustomerRequest request) {
+            return base.Channel.EditCustomerAsync(request);
         }
         
-        public void RemoveCustomer(string firstName, string lastName, int id) {
-            base.Channel.RemoveCustomer(firstName, lastName, id);
+        public RentalServiceClient.RentalService.RemoveCustomerResponse RemoveCustomer(RentalServiceClient.RentalService.RemoveCustomerRequest request) {
+            return base.Channel.RemoveCustomer(request);
         }
         
-        public System.Threading.Tasks.Task RemoveCustomerAsync(string firstName, string lastName, int id) {
-            return base.Channel.RemoveCustomerAsync(firstName, lastName, id);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.RemoveCustomerResponse> RemoveCustomerAsync(RentalServiceClient.RentalService.RemoveCustomerRequest request) {
+            return base.Channel.RemoveCustomerAsync(request);
         }
         
-        public void AddBooking(RentalServiceClient.RentalService.Car rentalCar, RentalServiceClient.RentalService.Customer renter, System.DateTime startTime, System.DateTime endTime) {
-            base.Channel.AddBooking(rentalCar, renter, startTime, endTime);
+        public RentalServiceClient.RentalService.AddBookingResponse AddBooking(RentalServiceClient.RentalService.AddBookingRequest request) {
+            return base.Channel.AddBooking(request);
         }
         
-        public System.Threading.Tasks.Task AddBookingAsync(RentalServiceClient.RentalService.Car rentalCar, RentalServiceClient.RentalService.Customer renter, System.DateTime startTime, System.DateTime endTime) {
-            return base.Channel.AddBookingAsync(rentalCar, renter, startTime, endTime);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.AddBookingResponse> AddBookingAsync(RentalServiceClient.RentalService.AddBookingRequest request) {
+            return base.Channel.AddBookingAsync(request);
         }
         
-        public void RemoveBooking(string bookingId) {
-            base.Channel.RemoveBooking(bookingId);
+        public RentalServiceClient.RentalService.RemoveBookingResponse RemoveBooking(RentalServiceClient.RentalService.RemoveBookingRequest request) {
+            return base.Channel.RemoveBooking(request);
         }
         
-        public System.Threading.Tasks.Task RemoveBookingAsync(string bookingId) {
-            return base.Channel.RemoveBookingAsync(bookingId);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.RemoveBookingResponse> RemoveBookingAsync(RentalServiceClient.RentalService.RemoveBookingRequest request) {
+            return base.Channel.RemoveBookingAsync(request);
         }
         
-        public void ReturnCar(RentalServiceClient.RentalService.Booking booking) {
-            base.Channel.ReturnCar(booking);
+        public RentalServiceClient.RentalService.ReturnCarResponse ReturnCar(RentalServiceClient.RentalService.ReturnCarRequest request) {
+            return base.Channel.ReturnCar(request);
         }
         
-        public System.Threading.Tasks.Task ReturnCarAsync(RentalServiceClient.RentalService.Booking booking) {
-            return base.Channel.ReturnCarAsync(booking);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.ReturnCarResponse> ReturnCarAsync(RentalServiceClient.RentalService.ReturnCarRequest request) {
+            return base.Channel.ReturnCarAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Car[] CheckDate(System.DateTime startDate, System.DateTime endDate) {
-            return base.Channel.CheckDate(startDate, endDate);
+        public RentalServiceClient.RentalService.CheckDateResponse CheckDate(RentalServiceClient.RentalService.CheckDateRequest request) {
+            return base.Channel.CheckDate(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> CheckDateAsync(System.DateTime startDate, System.DateTime endDate) {
-            return base.Channel.CheckDateAsync(startDate, endDate);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.CheckDateResponse> CheckDateAsync(RentalServiceClient.RentalService.CheckDateRequest request) {
+            return base.Channel.CheckDateAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Customer[] GetCustomers(string searchString) {
-            return base.Channel.GetCustomers(searchString);
+        public RentalServiceClient.RentalService.GetCustomersResponse GetCustomers(RentalServiceClient.RentalService.GetCustomersRequest request) {
+            return base.Channel.GetCustomers(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer[]> GetCustomersAsync(string searchString) {
-            return base.Channel.GetCustomersAsync(searchString);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomersResponse> GetCustomersAsync(RentalServiceClient.RentalService.GetCustomersRequest request) {
+            return base.Channel.GetCustomersAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Customer GetCustomerById(int id) {
-            return base.Channel.GetCustomerById(id);
+        public RentalServiceClient.RentalService.GetCustomerByIdResponse GetCustomerById(RentalServiceClient.RentalService.GetCustomerByIdRequest request) {
+            return base.Channel.GetCustomerById(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerByIdAsync(int id) {
-            return base.Channel.GetCustomerByIdAsync(id);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerByIdResponse> GetCustomerByIdAsync(RentalServiceClient.RentalService.GetCustomerByIdRequest request) {
+            return base.Channel.GetCustomerByIdAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Customer[] GetCustomersByName(string name) {
-            return base.Channel.GetCustomersByName(name);
+        public RentalServiceClient.RentalService.GetCustomersByNameResponse GetCustomersByName(RentalServiceClient.RentalService.GetCustomersByNameRequest request) {
+            return base.Channel.GetCustomersByName(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer[]> GetCustomersByNameAsync(string name) {
-            return base.Channel.GetCustomersByNameAsync(name);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomersByNameResponse> GetCustomersByNameAsync(RentalServiceClient.RentalService.GetCustomersByNameRequest request) {
+            return base.Channel.GetCustomersByNameAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Customer GetCustomerByPhoneNumber(string number) {
-            return base.Channel.GetCustomerByPhoneNumber(number);
+        public RentalServiceClient.RentalService.GetCustomerByPhoneNumberResponse GetCustomerByPhoneNumber(RentalServiceClient.RentalService.GetCustomerByPhoneNumberRequest request) {
+            return base.Channel.GetCustomerByPhoneNumber(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerByPhoneNumberAsync(string number) {
-            return base.Channel.GetCustomerByPhoneNumberAsync(number);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerByPhoneNumberResponse> GetCustomerByPhoneNumberAsync(RentalServiceClient.RentalService.GetCustomerByPhoneNumberRequest request) {
+            return base.Channel.GetCustomerByPhoneNumberAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Customer GetCustomerByEmail(string email) {
-            return base.Channel.GetCustomerByEmail(email);
+        public RentalServiceClient.RentalService.GetCustomerByEmailResponse GetCustomerByEmail(RentalServiceClient.RentalService.GetCustomerByEmailRequest request) {
+            return base.Channel.GetCustomerByEmail(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerByEmailAsync(string email) {
-            return base.Channel.GetCustomerByEmailAsync(email);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerByEmailResponse> GetCustomerByEmailAsync(RentalServiceClient.RentalService.GetCustomerByEmailRequest request) {
+            return base.Channel.GetCustomerByEmailAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Customer GetCustomerFromBooking(RentalServiceClient.RentalService.Booking booking) {
-            return base.Channel.GetCustomerFromBooking(booking);
+        public RentalServiceClient.RentalService.GetCustomerFromBookingResponse GetCustomerFromBooking(RentalServiceClient.RentalService.GetCustomerFromBookingRequest request) {
+            return base.Channel.GetCustomerFromBooking(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Customer> GetCustomerFromBookingAsync(RentalServiceClient.RentalService.Booking booking) {
-            return base.Channel.GetCustomerFromBookingAsync(booking);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCustomerFromBookingResponse> GetCustomerFromBookingAsync(RentalServiceClient.RentalService.GetCustomerFromBookingRequest request) {
+            return base.Channel.GetCustomerFromBookingAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Car GetCarByReg(string regNumber) {
-            return base.Channel.GetCarByReg(regNumber);
+        public RentalServiceClient.RentalService.GetCarByRegResponse GetCarByReg(RentalServiceClient.RentalService.GetCarByRegRequest request) {
+            return base.Channel.GetCarByReg(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car> GetCarByRegAsync(string regNumber) {
-            return base.Channel.GetCarByRegAsync(regNumber);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarByRegResponse> GetCarByRegAsync(RentalServiceClient.RentalService.GetCarByRegRequest request) {
+            return base.Channel.GetCarByRegAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Car[] GetCarsByBrand(string brand) {
-            return base.Channel.GetCarsByBrand(brand);
+        public RentalServiceClient.RentalService.GetCarsByBrandResponse GetCarsByBrand(RentalServiceClient.RentalService.GetCarsByBrandRequest request) {
+            return base.Channel.GetCarsByBrand(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByBrandAsync(string brand) {
-            return base.Channel.GetCarsByBrandAsync(brand);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByBrandResponse> GetCarsByBrandAsync(RentalServiceClient.RentalService.GetCarsByBrandRequest request) {
+            return base.Channel.GetCarsByBrandAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Car[] GetCarsByYear(int year) {
-            return base.Channel.GetCarsByYear(year);
+        public RentalServiceClient.RentalService.GetCarsByYearResponse GetCarsByYear(RentalServiceClient.RentalService.GetCarsByYearRequest request) {
+            return base.Channel.GetCarsByYear(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByYearAsync(int year) {
-            return base.Channel.GetCarsByYearAsync(year);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByYearResponse> GetCarsByYearAsync(RentalServiceClient.RentalService.GetCarsByYearRequest request) {
+            return base.Channel.GetCarsByYearAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Car[] GetCarsByModel(string model) {
-            return base.Channel.GetCarsByModel(model);
+        public RentalServiceClient.RentalService.GetCarsByModelResponse GetCarsByModel(RentalServiceClient.RentalService.GetCarsByModelRequest request) {
+            return base.Channel.GetCarsByModel(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByModelAsync(string model) {
-            return base.Channel.GetCarsByModelAsync(model);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByModelResponse> GetCarsByModelAsync(RentalServiceClient.RentalService.GetCarsByModelRequest request) {
+            return base.Channel.GetCarsByModelAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Car[] GetCarsByIsRented() {
-            return base.Channel.GetCarsByIsRented();
+        public RentalServiceClient.RentalService.GetCarsByIsRentedResponse GetCarsByIsRented(RentalServiceClient.RentalService.GetCarsByIsRentedRequest request) {
+            return base.Channel.GetCarsByIsRented(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car[]> GetCarsByIsRentedAsync() {
-            return base.Channel.GetCarsByIsRentedAsync();
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarsByIsRentedResponse> GetCarsByIsRentedAsync(RentalServiceClient.RentalService.GetCarsByIsRentedRequest request) {
+            return base.Channel.GetCarsByIsRentedAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Car GetCarFromBooking(RentalServiceClient.RentalService.Booking booking) {
-            return base.Channel.GetCarFromBooking(booking);
+        public RentalServiceClient.RentalService.GetCarFromBookingResponse GetCarFromBooking(RentalServiceClient.RentalService.GetCarFromBookingRequest request) {
+            return base.Channel.GetCarFromBooking(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Car> GetCarFromBookingAsync(RentalServiceClient.RentalService.Booking booking) {
-            return base.Channel.GetCarFromBookingAsync(booking);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetCarFromBookingResponse> GetCarFromBookingAsync(RentalServiceClient.RentalService.GetCarFromBookingRequest request) {
+            return base.Channel.GetCarFromBookingAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Booking GetBookingById(string bookingId) {
-            return base.Channel.GetBookingById(bookingId);
+        public RentalServiceClient.RentalService.GetBookingByIdResponse GetBookingById(RentalServiceClient.RentalService.GetBookingByIdRequest request) {
+            return base.Channel.GetBookingById(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking> GetBookingByIdAsync(string bookingId) {
-            return base.Channel.GetBookingByIdAsync(bookingId);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingByIdResponse> GetBookingByIdAsync(RentalServiceClient.RentalService.GetBookingByIdRequest request) {
+            return base.Channel.GetBookingByIdAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Booking[] GetBookingsByCar(RentalServiceClient.RentalService.Car car) {
-            return base.Channel.GetBookingsByCar(car);
+        public RentalServiceClient.RentalService.GetBookingsByCarResponse GetBookingsByCar(RentalServiceClient.RentalService.GetBookingsByCarRequest request) {
+            return base.Channel.GetBookingsByCar(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCarAsync(RentalServiceClient.RentalService.Car car) {
-            return base.Channel.GetBookingsByCarAsync(car);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCarResponse> GetBookingsByCarAsync(RentalServiceClient.RentalService.GetBookingsByCarRequest request) {
+            return base.Channel.GetBookingsByCarAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Booking[] GetBookingsByCustomer(RentalServiceClient.RentalService.Customer customer) {
-            return base.Channel.GetBookingsByCustomer(customer);
+        public RentalServiceClient.RentalService.GetBookingsByCustomerResponse GetBookingsByCustomer(RentalServiceClient.RentalService.GetBookingsByCustomerRequest request) {
+            return base.Channel.GetBookingsByCustomer(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCustomerAsync(RentalServiceClient.RentalService.Customer customer) {
-            return base.Channel.GetBookingsByCustomerAsync(customer);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCustomerResponse> GetBookingsByCustomerAsync(RentalServiceClient.RentalService.GetBookingsByCustomerRequest request) {
+            return base.Channel.GetBookingsByCustomerAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerEmail(string email) {
-            return base.Channel.GetBookingsByCustomerEmail(email);
+        public RentalServiceClient.RentalService.GetBookingsByCustomerEmailResponse GetBookingsByCustomerEmail(RentalServiceClient.RentalService.GetBookingsByCustomerEmailRequest request) {
+            return base.Channel.GetBookingsByCustomerEmail(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCustomerEmailAsync(string email) {
-            return base.Channel.GetBookingsByCustomerEmailAsync(email);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCustomerEmailResponse> GetBookingsByCustomerEmailAsync(RentalServiceClient.RentalService.GetBookingsByCustomerEmailRequest request) {
+            return base.Channel.GetBookingsByCustomerEmailAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Booking[] GetBookingsByCustomerPhone(string phone) {
-            return base.Channel.GetBookingsByCustomerPhone(phone);
+        public RentalServiceClient.RentalService.GetBookingsByCustomerPhoneResponse GetBookingsByCustomerPhone(RentalServiceClient.RentalService.GetBookingsByCustomerPhoneRequest request) {
+            return base.Channel.GetBookingsByCustomerPhone(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByCustomerPhoneAsync(string phone) {
-            return base.Channel.GetBookingsByCustomerPhoneAsync(phone);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByCustomerPhoneResponse> GetBookingsByCustomerPhoneAsync(RentalServiceClient.RentalService.GetBookingsByCustomerPhoneRequest request) {
+            return base.Channel.GetBookingsByCustomerPhoneAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Booking[] GetBookingsByTime(System.DateTime start, System.DateTime end) {
-            return base.Channel.GetBookingsByTime(start, end);
+        public RentalServiceClient.RentalService.GetBookingsByTimeResponse GetBookingsByTime(RentalServiceClient.RentalService.GetBookingsByTimeRequest request) {
+            return base.Channel.GetBookingsByTime(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByTimeAsync(System.DateTime start, System.DateTime end) {
-            return base.Channel.GetBookingsByTimeAsync(start, end);
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByTimeResponse> GetBookingsByTimeAsync(RentalServiceClient.RentalService.GetBookingsByTimeRequest request) {
+            return base.Channel.GetBookingsByTimeAsync(request);
         }
         
-        public RentalServiceClient.RentalService.Booking[] GetBookingsByIsNotReturned() {
-            return base.Channel.GetBookingsByIsNotReturned();
+        public RentalServiceClient.RentalService.GetBookingsByIsNotReturnedResponse GetBookingsByIsNotReturned(RentalServiceClient.RentalService.GetBookingsByIsNotReturnedRequest request) {
+            return base.Channel.GetBookingsByIsNotReturned(request);
         }
         
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.Booking[]> GetBookingsByIsNotReturnedAsync() {
-            return base.Channel.GetBookingsByIsNotReturnedAsync();
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.GetBookingsByIsNotReturnedResponse> GetBookingsByIsNotReturnedAsync(RentalServiceClient.RentalService.GetBookingsByIsNotReturnedRequest request) {
+            return base.Channel.GetBookingsByIsNotReturnedAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        RentalServiceClient.RentalService.CarInfo RentalServiceClient.RentalService.IRentalServiceTest.GetCar(RentalServiceClient.RentalService.CarRequest request) {
+        public RentalServiceClient.RentalService.CarInfo GetCar(RentalServiceClient.RentalService.CarRequest request) {
             return base.Channel.GetCar(request);
-        }
-        
-        public string GetCar(string LicenseKey, string CarId, out string Brand, out int Year, out string Model, out bool IsRented) {
-            RentalServiceClient.RentalService.CarRequest inValue = new RentalServiceClient.RentalService.CarRequest();
-            inValue.LicenseKey = LicenseKey;
-            inValue.CarId = CarId;
-            RentalServiceClient.RentalService.CarInfo retVal = ((RentalServiceClient.RentalService.IRentalServiceTest)(this)).GetCar(inValue);
-            Brand = retVal.Brand;
-            Year = retVal.Year;
-            Model = retVal.Model;
-            IsRented = retVal.IsRented;
-            return retVal.RegNumber;
         }
         
         public System.Threading.Tasks.Task<RentalServiceClient.RentalService.CarInfo> GetCarAsync(RentalServiceClient.RentalService.CarRequest request) {
             return base.Channel.GetCarAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        RentalServiceClient.RentalService.SaveCarResponse RentalServiceClient.RentalService.IRentalServiceTest.SaveCar(RentalServiceClient.RentalService.CarInfo request) {
+        public RentalServiceClient.RentalService.SaveCarResponse SaveCar(RentalServiceClient.RentalService.CarInfo request) {
             return base.Channel.SaveCar(request);
         }
         
-        public void SaveCar(string RegNumber, string Brand, int Year, string Model, bool IsRented) {
-            RentalServiceClient.RentalService.CarInfo inValue = new RentalServiceClient.RentalService.CarInfo();
-            inValue.RegNumber = RegNumber;
-            inValue.Brand = Brand;
-            inValue.Year = Year;
-            inValue.Model = Model;
-            inValue.IsRented = IsRented;
-            RentalServiceClient.RentalService.SaveCarResponse retVal = ((RentalServiceClient.RentalService.IRentalServiceTest)(this)).SaveCar(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<RentalServiceClient.RentalService.SaveCarResponse> RentalServiceClient.RentalService.IRentalServiceTest.SaveCarAsync(RentalServiceClient.RentalService.CarInfo request) {
+        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.SaveCarResponse> SaveCarAsync(RentalServiceClient.RentalService.CarInfo request) {
             return base.Channel.SaveCarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<RentalServiceClient.RentalService.SaveCarResponse> SaveCarAsync(string RegNumber, string Brand, int Year, string Model, bool IsRented) {
-            RentalServiceClient.RentalService.CarInfo inValue = new RentalServiceClient.RentalService.CarInfo();
-            inValue.RegNumber = RegNumber;
-            inValue.Brand = Brand;
-            inValue.Year = Year;
-            inValue.Model = Model;
-            inValue.IsRented = IsRented;
-            return ((RentalServiceClient.RentalService.IRentalServiceTest)(this)).SaveCarAsync(inValue);
         }
     }
 }

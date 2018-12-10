@@ -17,19 +17,18 @@ namespace RentalServiceClient
         protected void Button1_Click(object sender, EventArgs e)
         {
             RentalService.RentalServiceTestClient client = new RentalService.RentalServiceTestClient("BasicHttpBinding_IRentalServiceTest");
-            client.AddCar(TextBox1.Text, TextBox2.Text, Convert.ToInt32(TextBox3.Text), TextBox4.Text);
+            RentalService.AddCarRequest request = new RentalService.AddCarRequest(TextBox1.Text, TextBox2.Text, Convert.ToInt32(TextBox3.Text), TextBox4.Text);
+            client.AddCar(request);
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             RentalService.RentalServiceTestClient client = new RentalService.RentalServiceTestClient();
             RentalService.CarRequest request = new RentalService.CarRequest();
-            request.LicenseKey = "SuperSecret123!!";
+            request.LicenseKey = "JoJosBizarre!!";
             request.CarId = TextBox1.Text;
 
             RentalService.CarInfo car = client.GetCar(request);
-            
-
         }
     }
 }
