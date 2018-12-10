@@ -74,6 +74,30 @@
     <None Include="Connected Services\RentalService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\RentalService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RentalService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RentalService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.Booking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.Car.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.CarInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\RentalService\RentalServiceClient.RentalService.SaveCarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\RentalService\RentalServiceTest.wsdl" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

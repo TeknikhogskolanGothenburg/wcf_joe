@@ -82,19 +82,10 @@ namespace RentalService
 
         [OperationContract]
         List<Booking> GetBookingsByCustomer(Customer customer);
-
-        //customer overload, most likely not needed
-        [OperationContract]
-        List<Booking> GetBookingsByCustomerEmail(Customer customer);
-
+        
         [OperationContract]
         List<Booking> GetBookingsByCustomerEmail(string email);
-
-
-        //customer overload, most likely not needed
-        [OperationContract]
-        List<Booking> GetBookingsByCustomerPhone(Customer customer);
-
+        
         [OperationContract]
         List<Booking> GetBookingsByCustomerPhone(string phone);
 
@@ -104,10 +95,11 @@ namespace RentalService
 
         [OperationContract]
         List<Booking> GetBookingsByIsNotReturned();
-
-        // När kunden kvitterar ut sin hyrbil.
-        [OperationContract]
-        void GetCar(Booking booking);
         
+        [OperationContract]
+        CarInfo GetCar(CarRequest request);
+
+        [OperationContract]
+        void SaveCar(CarInfo car);
     }
 }

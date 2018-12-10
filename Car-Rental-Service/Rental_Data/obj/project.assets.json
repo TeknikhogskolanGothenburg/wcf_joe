@@ -176,23 +176,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Joe\\.nuget\\packages\\": {},
+    "C:\\Users\\JoeKH_000\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joe\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj",
+      "projectUniqueName": "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj",
       "projectName": "Rental_Data",
-      "projectPath": "C:\\Users\\Joe\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj",
-      "packagesPath": "C:\\Users\\Joe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joe\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\obj\\",
+      "projectPath": "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\Rental_Data.csproj",
+      "packagesPath": "C:\\Users\\JoeKH_000\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JoeKH_000\\Source\\Repos\\CarRentalServiceWCF\\Car-Rental-Service\\Rental_Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Joe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JoeKH_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
