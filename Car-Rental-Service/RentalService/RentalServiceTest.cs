@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.ServiceModel;
 using System.ServiceModel.Web;
+using System.Xml;
 
 namespace RentalService
 {
-    public class RentalServiceTest : IRentalServiceTest
+    public class RentalServiceTest : IRentalServiceTest, IRestService
     {
         public void AddCar(string regNumber, string brand, int year, string model)
         {
@@ -17,7 +19,17 @@ namespace RentalService
 
         public void RemoveCar(string regNumber)
         {
-            Rentals.RemoveCar(regNumber);
+            try
+            {
+                Rentals.RemoveCar(regNumber);
+            }
+            catch
+            {
+                DoesNotExistFault fault = new DoesNotExistFault();
+                fault.Operation = "Remove car";
+                fault.Description = "Car does not exist";
+                throw new FaultException<DoesNotExistFault>(fault);
+            }
         }
 
         public void AddCustomer(string firstName, string lastName, string phoneNumber, string emailAddress)
@@ -27,12 +39,33 @@ namespace RentalService
 
         public void EditCustomer(Customer customer)
         {
-            Rentals.EditCustomer(customer);
+            try
+            {
+                Rentals.EditCustomer(customer);
+            }
+            //would add specific catch after reading message, but this is the idea.
+            catch
+            {
+                DoesNotExistFault fault = new DoesNotExistFault();
+                fault.Operation = "Edit customer";
+                fault.Description = "Customer does not exist";
+                throw new FaultException<DoesNotExistFault>(fault);
+            }
         }
 
         public void RemoveCustomer(string firstName, string lastName, int id)
         {
-            Rentals.RemoveCustomer(firstName, lastName, id);
+            try
+            {
+                Rentals.RemoveCustomer(firstName, lastName, id);
+            }
+            catch
+            {
+                DoesNotExistFault fault = new DoesNotExistFault();
+                fault.Operation = "Remove customer";
+                fault.Description = "Customer does not exist";
+                throw new FaultException<DoesNotExistFault>(fault);
+            }
         }
 
         public void AddBooking(Car rentalCar, Customer renter, DateTime startTime, DateTime endTime)
@@ -42,7 +75,17 @@ namespace RentalService
 
         public void RemoveBooking(string bookingId)
         {
-            Rentals.RemoveBooking(bookingId);
+            try
+            {
+                Rentals.RemoveBooking(bookingId);
+            }
+            catch
+            {
+                DoesNotExistFault fault = new DoesNotExistFault();
+                fault.Operation = "Remove Booking";
+                fault.Description = "Booking does not exist";
+                throw new FaultException<DoesNotExistFault>(fault);
+            }
         }
 
         public void ReturnCar(Booking booking)
@@ -266,6 +309,53 @@ namespace RentalService
             newBooking.IsReturned = booking.IsReturned;
 
             Rentals.Bookings.Add(newBooking);
+        }
+
+        //API Methods
+        public void AddCarByRest(List<string> carList)
+        {
+            if (carList.Count != 5)
+            {
+                throw new WebFaultException<string>(
+                    "Incorrect attributes",
+                    HttpStatusCode.InternalServerError);
+            }
+            else
+            {
+                try
+                {
+                    Car car = new Car();
+                    car.RegNumber = carList[0];
+                    car.Brand = carList[1];
+                    car.Year = Convert.ToInt32(carList[2]);
+                    car.Model = carList[3];
+                    if (carList[4] == "true")
+                    {
+                        car.IsRented = true;
+                    }
+                    else
+                    {
+                        car.IsRented = false;
+                    }
+                }
+                catch
+                {
+                    throw new WebFaultException<string>(
+                    "Incorrect attributes",
+                    HttpStatusCode.InternalServerError);
+                }
+            }
+        }
+
+        public List<string> GetCarByRest(string carId)
+        {
+            List<string> carInString = new List<string>();
+            Car car = GetCarByReg(carId);
+            carInString.Add(car.RegNumber);
+            carInString.Add(car.Model);
+            carInString.Add(car.Year.ToString());
+            carInString.Add(car.IsRented.ToString());
+            return carInString;
         }
     }
 }

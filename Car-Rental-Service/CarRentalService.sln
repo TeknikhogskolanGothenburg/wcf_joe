@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalService", "RentalServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalServiceHost", "RentalServiceHost\RentalServiceHost.csproj", "{E6835317-8A30-4467-8385-488A3371A52F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalServiceClient", "RentalServiceClient\RentalServiceClient.csproj", "{0877345E-6A5E-4ACE-9A96-DF65B229DD92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestHost", "RestHost\RestHost.csproj", "{9923644A-D587-449E-B050-FFF0E645AC78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{E6835317-8A30-4467-8385-488A3371A52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6835317-8A30-4467-8385-488A3371A52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6835317-8A30-4467-8385-488A3371A52F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0877345E-6A5E-4ACE-9A96-DF65B229DD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0877345E-6A5E-4ACE-9A96-DF65B229DD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0877345E-6A5E-4ACE-9A96-DF65B229DD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0877345E-6A5E-4ACE-9A96-DF65B229DD92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9923644A-D587-449E-B050-FFF0E645AC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9923644A-D587-449E-B050-FFF0E645AC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9923644A-D587-449E-B050-FFF0E645AC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9923644A-D587-449E-B050-FFF0E645AC78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
