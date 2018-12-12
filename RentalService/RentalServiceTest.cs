@@ -10,7 +10,7 @@ using System.Xml;
 
 namespace RentalService
 {
-    public class RentalServiceTest : IRentalServiceTest, IRestService
+    public class RentalServiceTest : IRentalServiceTest, IRestService, ISupportService
     {
         public void AddCar(string regNumber, string brand, int year, string model)
         {
