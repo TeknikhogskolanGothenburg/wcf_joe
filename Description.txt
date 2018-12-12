@@ -1,1 +1,22 @@
+Joe Hodge
 
+-Var har du valt att hantera exceptions
+
+  Jag har valt att hantera exceptions med en try-catch i situationer som gäller autentisering eller säkerhet. 
+  De ligger i metoderna för Message Contract. J
+  ag har också valt FaultContracts för grejen som kanske inte finns i databas/hardcodat list. t.ex. EditCUstomer 
+  eller DeleteCustomer ger exception om ID:et inte finns.
+
+-Vilka bindings har du använt, och varför har du valt just dessa
+
+  Jag använder wsHttpBinding och netTcpBinding som endpoints. 
+  wsHttpBinding använder jag för att det behövs för säkerhet. 
+  netTcpBinding använder jag för metoderna som skulle används internt. Rest Hosten använder webHttpBinding som endpoint.
+
+-Om du provat en sak men inte fått den att fungera som du vill och gjort något annat
+  Jag har provat att ha REST metoderna i den "main" service men det hade svårt med 
+  MessageContract så flyttade jag de metoderna till ett annat interface.
+  
+-Och andra aktiva val du har gjort
+  Jag har gjort Rentals som är classen med alla logic till static för att jag använder inte databas. 
+  Om jag hade en databas skulle den vara public och jag kunde skapa "instances" av Rentals i servicen. 
